@@ -18,7 +18,8 @@
 - 🔧 All in the command line
 
 The purpose of this is to quickly and easily scaffold projects on Node.js without clutter and unnecessary files that usually other create-* tools contain. For example:
-- <a href="https://vitejs.dev">create-vite</a>: React and Vite SVGs, 2 different CSS files, and a README.md
-- create-react-app: reportWebVitals.js, setupTests.js, App.test.js, again 2 different CSS files, and a README.md
-
-These are made to showcase the possibilities with whatever they have, and whatever may be helpful to developers. If you find these pre-made things useful, then use them.
+- <a href="https://vite.new/">create-vite</a>: React and Vite SVGs, 2 different CSS files, and a README.md
+- <a href="https://create-react-app.dev/">create-react-app</a>: reportWebVitals.js, setupTests.js, App.test.js, again 2 different CSS files, and a README.md
+- <a href="https://www.npmjs.com/package/create-vue">create-vue</a>: 5 icons, HelloWorld.vue, TheWelcome.vue, WelcomeItem.vue, a logo.svg, 2 CSS files, and a README.md
+  
+_These are made to showcase the possibilities with whatever they have, and whatever may be helpful to developers. If you find these pre-made things useful, then use them. Note that I only made it so I can have just a clean, minimal file count project out of the box._
