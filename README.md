@@ -11,5 +11,5 @@
 
 # ProjectInit 🎈
 > Scaffold a new project, without all the unnecessary clutter other tools give.
----
+
 - Projects running in 15 seconds
