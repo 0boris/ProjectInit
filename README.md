@@ -10,3 +10,4 @@
 <br/>
 
 # ProjectInit 🎈
+> Scaffold a new project, without all the unnecessary clutter other tools give.
