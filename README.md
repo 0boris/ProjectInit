@@ -2,6 +2,7 @@
   <a href="https://projectinit.0boris.tech" target="_blank" rel="noopener noreferrer">
     <img width="200" src="https://0boris.tech/projectinit.svg" alt="ProjectInit Logo">
   </a>
+  
 </p>
 <br/>
 <p align="center">
@@ -22,4 +23,14 @@ The purpose of this is to quickly and easily scaffold projects on Node.js withou
 - <a href="https://create-react-app.dev/">create-react-app</a>: reportWebVitals.js, setupTests.js, App.test.js, again 2 different CSS files, and a README.md
 - <a href="https://www.npmjs.com/package/create-vue">create-vue</a>: 5 icons, HelloWorld.vue, TheWelcome.vue, WelcomeItem.vue, a logo.svg, 2 CSS files, and a README.md
   
-_These are made to showcase the possibilities with whatever they have, and whatever may be helpful to developers. If you find these pre-made things useful, then use them. Note that I only made it so I can have just a clean, minimal file count project out of the box._
+_These are made to showcase the possibilities with whatever they have, and whatever may be helpful to developers. If you find these pre-made things useful, then use them._
+
+## What comes out of the box? 📦
+ 
+| Frontend                                              | Backend                                              |
+| ----------------------------------------------------- | :--------------------------------------------------- |
+| TailwindCSS                                           | A simple GET request that returns 'Hello, world!'    |
+| TypeScript and JavaScript support                     | TypeScript and JavaScript support                    |
+
+## What is included?
+> So far, I'm focused on web apps and websites. Different types of Node.js projects may be coming soon!
