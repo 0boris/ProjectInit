@@ -18,7 +18,7 @@
 - 🔧 All in the command line
 
 The purpose of this is to quickly and easily scaffold projects on Node.js without clutter and unnecessary files that usually other create-* tools contain. For example:
-- create-vite: React and Vite SVGs, 2 different CSS files, and a README.md
+- <a href="https://vitejs.dev">create-vite</a>: React and Vite SVGs, 2 different CSS files, and a README.md
 - create-react-app: reportWebVitals.js, setupTests.js, App.test.js, again 2 different CSS files, and a README.md
 
 These are made to showcase the possibilities with whatever they have, and whatever may be helpful to developers. If you find these pre-made things useful, then use them.
