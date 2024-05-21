@@ -8,5 +8,5 @@
   <a href="https://npmjs.com/package/projectinit"><img src="https://img.shields.io/npm/v/projectinit.svg" alt="npm package"></a><br/>
 </p>
 <br/>
----
+
 # ProjectInit 🎈
