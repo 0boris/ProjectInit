@@ -1,0 +1,33 @@
+{
+  "name": "projectinit",
+  "version": "1.0.0",
+  "description": "A universal project initializer for React, Vue, Svelte, Next.js, and more.",
+  "main": "lib/index.js",
+  "bin": {
+    "projectinit": "./dist/bin/cli.js"
+  },
+  "scripts": {
+    "build": "tsc"
+  },
+  "dependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "fs-extra": "^10.0.0",
+    "inquirer": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/inquirer": "^9.0.0",
+    "typescript": "^5.7.3"
+  },
+  "keywords": [
+    "bootstrap",
+    "initializer",
+    "cli",
+    "react",
+    "vue",
+    "svelte",
+    "next"
+  ],
+  "author": "0Boris",
+  "license": "MIT"
+}

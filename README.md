@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://projectinit.0boris.tech" target="_blank" rel="noopener noreferrer">
-    <img width="200" src="https://0boris.tech/projectinit.svg" alt="ProjectInit Logo">
+  <a href="https://projectinit.0boris.xyz" target="_blank" rel="noopener noreferrer">
+    <img width="200" src="https://github.com/0boris/projectinit/assets/ProjectInit.png" alt="ProjectInit Logo">
   </a>
   
 </p>
@@ -16,7 +16,7 @@
 - 🎨 Variety of starters
 - ⚡ Ready in 15 seconds
 - 💡 Easy to Use
-- 🔧 All in the command line
+- 🔧 One tool for everything
 
 <p align="justify">
   The purpose of this is to quickly and easily scaffold projects on Node.js without clutter and unnecessary files that usually other create-* tools contain. For example:
@@ -32,7 +32,7 @@ _These are made to showcase the possibilities with whatever they have, and whate
  
 | Frontend                                              | Backend                                              |
 | ----------------------------------------------------- | :--------------------------------------------------- |
-| TailwindCSS                                           | A simple GET request that returns 'Hello, world!'    |
+| TailwindCSS                                           | A simple 'Hello, {framework} with TailwindCSS!'      |
 | TypeScript and JavaScript support                     | TypeScript and JavaScript support                    |
 
 ## What is included?
