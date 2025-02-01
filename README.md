@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://projectinit.0boris.xyz" target="_blank" rel="noopener noreferrer">
-    <img width="200" src="https://github.com/0boris/projectinit/assets/ProjectInit.png" alt="ProjectInit Logo">
+    <img width="200" src="https://github.com/0boris/projectinit/blob/main/assets/ProjectInit.png" alt="ProjectInit Logo">
   </a>
   
 </p>
