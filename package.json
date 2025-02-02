@@ -4,7 +4,7 @@
   "description": "A universal project initializer for React, Vue, Svelte, Next.js, and more.",
   "main": "lib/index.js",
   "bin": {
-    "projectinit": "./dist/bin/cli.js"
+    "projectinit": "dist/bin/cli.js"
   },
   "files": [
     "dist",
