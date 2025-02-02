@@ -21,6 +21,10 @@ const templates: FrameworkMapping = {
   vue: {
     javascript: path.join(__dirname, '../templates/vue/js'),
     typescript: path.join(__dirname, '../templates/vue/ts')
+  },
+  svelte: {
+    javascript: path.join(__dirname, '../templates/svelte/js'),
+    typescript: path.join(__dirname, '../templates/svelte/ts')
   }
 };
 
