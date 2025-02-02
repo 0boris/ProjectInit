@@ -5,6 +5,7 @@
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import frameworks from './frameworks';
+import { success } from '../functions'
 
 /**
  * Initializes a new project by copying the corresponding template.
@@ -36,7 +37,7 @@ export function initProject(framework: string, projectName: string, language: st
   // Copy the template folder to the destination.
   fs.copy(templatePath, destination)
     .then(() => {
-      console.log(`Project "${projectName}" created successfully using ${framework} with ${language}.`);
+      success(projectName)
     })
     .catch(err => {
       console.error('Error creating project:', err);
