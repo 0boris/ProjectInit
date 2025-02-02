@@ -32,9 +32,9 @@ async function promptUser(): Promise<{
       name: 'projectType',
       message: 'Choose your project type:',
       choices: [
-        { name: 'Frontend (React, Vue, Svelte)', value: 'frontend' },
-        { name: 'Backend (Express)', value: 'backend' },
-        { name: 'Full-stack (NextJS)', value: 'fullstack' }
+        { name: 'Frontend Framework', value: 'frontend' },
+        { name: 'Backend Framework', value: 'backend' },
+        { name: 'Full-stack Framework', value: 'fullstack' }
       ]
     },
     {
