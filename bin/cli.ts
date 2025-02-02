@@ -1,32 +1,56 @@
 #!/usr/bin/env node --no-warnings
 /**
  * CLI entry point for ProjectInit.
- * This script bootstraps a new project based on the selected framework and language.
+ * This script bootstraps a new project based on the selected project type, framework, project name, and language.
  *
  * Usage:
- *   projectinit <framework> <projectName> <language>
+ *   projectinit <projectType> <framework> <projectName> <language>
  * If any arguments are missing, the user will be prompted interactively.
  */
 
-console.log("Loading ProjectInit...")
+console.log("Loading ProjectInit...");
 
 import inquirer from 'inquirer';
 import { initProject } from '../lib/commands/createProject';
 
-// Retrieve command-line arguments (skipping node executable and script path)
+// Retrieve command-line arguments (skipping the node executable and script path)
 const args: string[] = process.argv.slice(2);
 
 /**
- * Prompts the user for the framework, project name, and language.
- * @returns An object containing the selected framework, projectName, and language.
+ * Prompts the user for the project type, framework, project name, and language.
+ * @returns An object containing the selected projectType, framework, projectName, and language.
  */
-async function promptUser(): Promise<{ framework: string; projectName: string; language: string }> {
+async function promptUser(): Promise<{
+  projectType: string;
+  framework: string;
+  projectName: string;
+  language: string;
+}> {
   return inquirer.prompt([
     {
       type: 'list',
+      name: 'projectType',
+      message: 'Choose your project type:',
+      choices: [
+        { name: 'Frontend (React, Vue, Svelte)', value: 'frontend' },
+        { name: 'Backend (Express)', value: 'backend' },
+        { name: 'Full-stack (NextJS)', value: 'fullstack' }
+      ]
+    },
+    {
+      type: 'list',
       name: 'framework',
-      message: 'Choose a framework:',
-      choices: ['react', 'vue', 'svelte', 'next']
+      message: 'Choose your framework:',
+      choices: (answers) => {
+        if (answers.projectType === 'frontend') {
+          return ['react', 'vue', 'svelte'];
+        } else if (answers.projectType === 'backend') {
+          return ['express', 'more coming soon'];
+        } else if (answers.projectType === 'fullstack') {
+          return ['nextjs', 'more coming soon'];
+        }
+        return [];
+      }
     },
     {
       type: 'input',
@@ -51,17 +75,32 @@ async function promptUser(): Promise<{ framework: string; projectName: string; l
  * Main function that determines input method (arguments or prompt) and initializes the project.
  */
 async function main(): Promise<void> {
+  let projectType: string;
   let framework: string;
   let projectName: string;
   let language: string;
 
-  // Expecting three arguments: framework, projectName, language.
-  if (args.length >= 3) {
-    framework = args[0].toLowerCase();
-    projectName = args[1];
-    language = args[2].toLowerCase();
-    if (!['react', 'vue', 'svelte', 'next'].includes(framework)) {
-      console.error('Framework must be one of: react, vue, svelte, next.');
+  // Expecting four arguments: projectType, framework, projectName, language.
+  if (args.length >= 4) {
+    projectType = args[0].toLowerCase();
+    framework = args[1].toLowerCase();
+    projectName = args[2];
+    language = args[3].toLowerCase();
+
+    if (!['frontend', 'backend', 'fullstack'].includes(projectType)) {
+      console.error('Project type must be one of: frontend, backend, fullstack.');
+      process.exit(1);
+    }
+    if (projectType === 'frontend' && !['react', 'vue', 'svelte'].includes(framework)) {
+      console.error('For frontend project type, framework must be one of: react, vue, svelte.');
+      process.exit(1);
+    }
+    if (projectType === 'backend' && !['express', 'more coming soon'].includes(framework)) {
+      console.error('For backend project type, framework must be either "express" or "more coming soon".');
+      process.exit(1);
+    }
+    if (projectType === 'fullstack' && !['nextjs', 'more coming soon'].includes(framework)) {
+      console.error('For full-stack project type, framework must be either "nextjs" or "more coming soon".');
       process.exit(1);
     }
     if (!['javascript', 'typescript'].includes(language)) {
@@ -71,9 +110,16 @@ async function main(): Promise<void> {
   } else {
     // Otherwise, prompt the user interactively.
     const answers = await promptUser();
+    projectType = answers.projectType;
     framework = answers.framework;
     projectName = answers.projectName;
     language = answers.language;
+  }
+
+  // If the user selects "more coming soon", exit with a message.
+  if (framework === 'more coming soon') {
+    console.error('Selected framework is not yet supported. Please try another framework.');
+    process.exit(1);
   }
 
   // Initialize the project by copying the appropriate template.

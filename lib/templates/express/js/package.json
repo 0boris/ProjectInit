@@ -1,0 +1,12 @@
+{
+  "name": "express-js-template",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}

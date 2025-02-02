@@ -1,8 +1,3 @@
-/**
- * Module that maps supported frameworks to their respective template directories,
- * separated by language.
- */
-
 import * as path from 'path';
 
 type FrameworkTemplates = {
@@ -14,17 +9,28 @@ type FrameworkMapping = {
 };
 
 const templates: FrameworkMapping = {
+  // Frontend frameworks
   react: {
     javascript: path.join(__dirname, '../templates/react/js'),
-    typescript: path.join(__dirname, '../templates/react/ts')
+    typescript: path.join(__dirname, '../templates/react/ts'),
   },
   vue: {
     javascript: path.join(__dirname, '../templates/vue/js'),
-    typescript: path.join(__dirname, '../templates/vue/ts')
+    typescript: path.join(__dirname, '../templates/vue/ts'),
   },
   svelte: {
     javascript: path.join(__dirname, '../templates/svelte/js'),
-    typescript: path.join(__dirname, '../templates/svelte/ts')
+    typescript: path.join(__dirname, '../templates/svelte/ts'),
+  },
+  // Backend framework
+  express: {
+    javascript: path.join(__dirname, '../templates/express/js'),
+    typescript: path.join(__dirname, '../templates/express/ts'),
+  },
+  // Full-stack framework
+  nextjs: {
+    javascript: path.join(__dirname, '../templates/nextjs/js'),
+    typescript: path.join(__dirname, '../templates/nextjs/ts'),
   }
 };
 
