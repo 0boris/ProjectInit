@@ -28,12 +28,37 @@
   
 _These are made to showcase the possibilities with whatever they have, and whatever may be helpful to developers. If you find these pre-made things useful, then use them._
 
+
+## Usage 🔨
+
+**ProjectInit is very easy to use. To begin, install the package with your favourite package manager:**
+
+```
+npm install -g projectinit-kit
+```
+
+Once the installation completes, it's as simple as running one command:
+
+```
+init
+```
+
+Then, the interactive installer will walk you through the scaffolding of whatever app you choose.
+
+
+> [!IMPORTANT]
+> The package comes with all of the templates by default. This means the package size can get quite big (depending on how many templates are added). *A network-based projectinit may be created if the bundle size becomes too big.*
+
 ## What comes out of the box? 📦
  
 | Frontend                                              | Backend                                              |
-| ----------------------------------------------------- | :--------------------------------------------------- |
-| TailwindCSS                                           | A simple 'Hello, {framework} with TailwindCSS!'      |
+| :---------------------------------------------------- | :--------------------------------------------------- |
+| TailwindCSS                                           | ONE simple '/' route to display some plain text      |
 | TypeScript and JavaScript support                     | TypeScript and JavaScript support                    |
 
-## What is included?
-> So far, I'm focused on web apps and websites. Different types of Node.js projects may be coming soon!
+## What is included? 🗃️
+| Frontend                                              | Backend                                              | Full-Stack                                            |
+| ----------------------------------------------------- | ---------------------------------------------------  | :---------------------------------------------------  |
+| React                                                 | Express                                              | NextJS                                                |
+| Vue                                                   | (more coming soon!)                                  |
+| Svelte                                                | <span style="color: rgba(0, 0, 0, 0.2);">Your text here</span>     |
