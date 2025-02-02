@@ -1,4 +1,4 @@
-#!/usr/bin/env node
+#!/usr/bin/env node --no-warnings
 /**
  * CLI entry point for ProjectInit.
  * This script bootstraps a new project based on the selected framework and language.
@@ -7,6 +7,8 @@
  *   projectinit <framework> <projectName> <language>
  * If any arguments are missing, the user will be prompted interactively.
  */
+
+console.log("Loading ProjectInit...")
 
 import inquirer from 'inquirer';
 import { initProject } from '../lib/commands/createProject';

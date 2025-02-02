@@ -6,6 +6,11 @@
   "bin": {
     "projectinit": "./dist/bin/cli.js"
   },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "build": "tsc"
   },

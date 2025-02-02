@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2019",
-    "module": "commonjs",
+    "module": "CommonJS",
     "outDir": "dist",
     "rootDir": ".",
     "esModuleInterop": true,
@@ -9,5 +9,6 @@
     "strict": true,
     "skipLibCheck": true
   },
-  "include": ["bin", "lib"]
+  "include": ["bin", "lib"],
+  "exclude": ["lib/templates"]
 }
