@@ -1,5 +1,5 @@
 {
-  "name": "projectinit-cli",
+  "name": "projectinit-kit",
   "version": "1.0.0",
   "description": "A universal project initializer for React, Vue, Svelte, Next.js, and more.",
   "main": "lib/index.js",
