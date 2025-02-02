@@ -1,10 +1,10 @@
 {
-  "name": "projectinit",
+  "name": "projectinit-cli",
   "version": "1.0.0",
   "description": "A universal project initializer for React, Vue, Svelte, Next.js, and more.",
   "main": "lib/index.js",
   "bin": {
-    "projectinit": "dist/bin/cli.js"
+    "init": "dist/bin/cli.js"
   },
   "files": [
     "dist",
