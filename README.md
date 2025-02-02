@@ -60,5 +60,5 @@ Then, the interactive installer will walk you through the scaffolding of whateve
 | Frontend                                              | Backend                                              | Full-Stack                                            |
 | ----------------------------------------------------- | ---------------------------------------------------  | :---------------------------------------------------  |
 | React                                                 | Express                                              | NextJS                                                |
-| Vue                                                   | (more coming soon!)                                  |
-| Svelte                                                | <span style="color: rgba(0, 0, 0, 0.2);">Your text here</span>     |
+| Vue                                                   | (more coming soon!)                                  | (more coming soon!)
+| Svelte                                                | (more coming soon!)                                  | (more coming soon!)
