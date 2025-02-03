@@ -10,27 +10,30 @@ type FrameworkMapping = {
 
 const templates: FrameworkMapping = {
   // Frontend frameworks
-  react: {
+  React: {
     javascript: path.join(__dirname, '../templates/react/js'),
     typescript: path.join(__dirname, '../templates/react/ts'),
   },
-  vue: {
+  Vue: {
     javascript: path.join(__dirname, '../templates/vue/js'),
     typescript: path.join(__dirname, '../templates/vue/ts'),
   },
-  svelte: {
+  Svelte: {
     javascript: path.join(__dirname, '../templates/svelte/js'),
     typescript: path.join(__dirname, '../templates/svelte/ts'),
   },
   // Backend framework
-  express: {
+  Express: {
     javascript: path.join(__dirname, '../templates/express/js'),
     typescript: path.join(__dirname, '../templates/express/ts'),
   },
   // Full-stack framework
-  nextjs: {
-    javascript: path.join(__dirname, '../templates/nextjs/js'),
-    typescript: path.join(__dirname, '../templates/nextjs/ts'),
+  "Next.js": {
+    javascript: path.join(__dirname, '../templates/next/js'),
+    typescript: path.join(__dirname, '../templates/next/ts'),
+  },
+  Nuxt: {
+    typescript: path.join(__dirname, '../templates/nuxt/ts'),
   }
 };
 

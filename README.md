@@ -60,5 +60,14 @@ Then, the interactive installer will walk you through the scaffolding of whateve
 | Frontend                                              | Backend                                              | Full-Stack                                            |
 | ----------------------------------------------------- | ---------------------------------------------------  | :---------------------------------------------------  |
 | React                                                 | Express                                              | NextJS                                                |
-| Vue                                                   | (more coming soon!)                                  | (more coming soon!)
+| Vue                                                   | (more coming soon!)                                  | Nuxt
 | Svelte                                                | (more coming soon!)                                  | (more coming soon!)
+
+
+## Roadmap 🛣️
+
+- ✅ Automatic dependency installation
+- ✅ Automatic server start after completion
+- ❌ Gateway to each project's respective installer if the user wants more customization
+- ❌ Wider range of templates - at least 20
+- ❌ Network-based installation

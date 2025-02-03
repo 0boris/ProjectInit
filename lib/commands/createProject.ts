@@ -1,11 +1,9 @@
-/**
- * Module for creating a new project based on the specified framework and language.
- */
-
 import * as fs from 'fs-extra';
 import * as path from 'path';
 import frameworks from './frameworks';
-import { success } from '../functions'
+import { success } from '../functions';
+import inquirer from 'inquirer';
+import { exec } from 'child_process';
 
 /**
  * Initializes a new project by copying the corresponding template.
@@ -36,8 +34,29 @@ export function initProject(framework: string, projectName: string, language: st
 
   // Copy the template folder to the destination.
   fs.copy(templatePath, destination)
-    .then(() => {
-      success(projectName)
+    .then(async () => {
+      // Display success message with instructions.
+      success(projectName);
+
+      // Ask the user if they want to install dependencies automatically.
+      const answer = await inquirer.prompt({
+        type: 'confirm',
+        name: 'install',
+        message: 'Would you like to install dependencies automatically?',
+        default: true,
+      });
+
+      if (answer.install) {
+        console.log('Installing dependencies. This may take a moment...');
+        exec('npm install', { cwd: destination }, (error, stdout, stderr) => {
+          if (error) {
+            console.error('Error installing dependencies:', error);
+            process.exit(1);
+          }
+          console.log(stdout);
+          console.log('Dependencies installed successfully!');
+        });
+      }
     })
     .catch(err => {
       console.error('Error creating project:', err);

@@ -43,11 +43,11 @@ async function promptUser(): Promise<{
       message: 'Choose your framework:',
       choices: (answers) => {
         if (answers.projectType === 'frontend') {
-          return ['react', 'vue', 'svelte'];
+          return ['React', 'Vue', 'Svelte'];
         } else if (answers.projectType === 'backend') {
-          return ['express', 'more coming soon'];
+          return ['Express', 'more coming soon'];
         } else if (answers.projectType === 'fullstack') {
-          return ['nextjs', 'more coming soon'];
+          return ['Next.js', 'Nuxt'];
         }
         return [];
       }
@@ -63,10 +63,18 @@ async function promptUser(): Promise<{
       type: 'list',
       name: 'language',
       message: 'Choose the language:',
-      choices: [
-        { name: 'JavaScript', value: 'javascript' },
-        { name: 'TypeScript', value: 'typescript' }
-      ]
+      choices: (answers) => {
+        if (answers.framework === 'Nuxt') {
+          return [
+            { name: 'JavaScript <-- not available for Nuxt', value: 'javascript', disabled: true },
+            { name: 'TypeScript', value: 'typescript' }
+          ];
+        }
+        return [
+          { name: 'JavaScript', value: 'javascript' },
+          { name: 'TypeScript', value: 'typescript' }
+        ];
+      }
     }
   ]);
 }
