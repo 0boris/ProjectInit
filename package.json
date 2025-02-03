@@ -1,6 +1,6 @@
 {
   "name": "projectinit-kit",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "description": "A universal project initializer for React, Vue, Svelte, Next.js, and more.",
   "main": "lib/index.js",
   "bin": {
